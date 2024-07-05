@@ -1,0 +1,245 @@
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: #192F59;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 10rem;
+}
+
+.header .left, .header .right {
+    display: flex;
+    align-items: center;
+}
+
+.header .left span {
+    margin-right: 2rem;
+}
+
+.header .right a, .header .right p {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.support {
+    background-color: #42b983;
+    padding: 10px 15px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.smzLogo {
+    height: 4rem;
+    margin-left: 20px;
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .left .logoImg {
+    height: 4rem;
+}
+
+.navbar .right a {
+    color: #1c3c82;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.navbar .right a.active {
+    color: #42b983;
+    border-bottom: 2px solid #42b983;
+}
+
+.main {
+    position: relative;
+    height: 90vh;
+    background: url('/mnt/data/image.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.overlay .about-title h1, .overlay .about-title p {
+    color: white;
+    margin: 0;
+}
+
+.overlay .about-title h1 {
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+
+.overlay .about-title p {
+    font-size: 1.5em;
+}
+
+.about-content {
+    padding: 2rem 10rem;
+}
+
+.about-section {
+    background-color: white;
+    padding: 2rem 3rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: #163269;
+    margin-bottom: 1rem;
+    font-size: 2em;
+    position: relative;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #42b983;
+    height: 3px;
+    width: 50px;
+}
+
+.about-section p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1em;
+}
+
+.footer {
+    background-color: #192F59;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer .footer-col {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer .footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer .footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #DF2526;
+    height: 2px;
+    width: 50px;
+}
+
+.footer .footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .footer-col ul li a:hover {
+    color: #fff;
+}
+
+.footer .footer-col address {
+    line-height: 1.8;
+}
+
+.footer .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+.footer .footer-socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: #DF2526;
+}
+
+.footer .footer-socials a {
+    margin: 0 10px;
+    color: #bbb;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer .footer-socials a:hover {
+    color: #DF2526;
+}
+
+.partner-section {
+    background-color: #1b2531;
+    padding: 20px 0;
+}
+
+.partner-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.partner-logo {
+    max-height: 8rem;
+    margin: 10px;
+    filter: brightness(0) invert(1);
+}
