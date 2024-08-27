@@ -110,6 +110,86 @@ img[loading="lazy"] {
     flex-direction: column;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .header,
+body.dark-mode .footer {
+    background-color: #1b2531;
+}
+
+body.dark-mode .navbar {
+    background-color: #222831;
+    color: #ffffff;
+}
+
+body.dark-mode .main .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .info-section,
+body.dark-mode .featured-programs,
+body.dark-mode .campus-tour,
+body.dark-mode .alumni-spotlight,
+body.dark-mode .testimonials-section,
+body.dark-mode .admission-section {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode a {
+    color: #42b983;
+}
+
+body.dark-mode .submit-button,
+body.dark-mode .register-button,
+body.dark-mode .apply-button,
+body.dark-mode .read-more {
+    background-color: #42b983;
+    color: #fff;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.dark-mode-toggle label {
+    background-color: #42b983;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-col.follow-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col.follow-us ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col.follow-us ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col.follow-us ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
 #contact-form label {
     margin-bottom: 0.5rem;
     color: #bbb;

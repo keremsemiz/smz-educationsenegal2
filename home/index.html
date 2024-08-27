@@ -176,6 +176,26 @@
             </div>
         </div>
 
+        <div class="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <label for="dark-mode-toggle">Dark Mode</label>
+        </div>
+
+        <section class="about-us">
+            <h2>About Us</h2>
+            <p>Founded in 2000, École EVA Dakar has been dedicated to providing high-quality education that fosters academic excellence and personal growth. Our mission is to prepare students for success in a rapidly changing world through innovative teaching and a commitment to diversity and inclusion.</p>
+        </section>
+
+        <div class="footer-col follow-us">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+            </ul>
+        </div>
+
         <div class="admission-section">
             <div class="admission-card">
                 <img src="/assets/professor.png" alt="Professor teaching students" class="admission-image">
@@ -425,6 +445,26 @@
             }
         });
 
+        // Dark mode toggle
+        const toggleSwitch = document.getElementById('dark-mode-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        toggleSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+            }
+        });
 
         // Event registration form validation
         document.getElementById('event-registration-form').addEventListener('submit', function(e) {
