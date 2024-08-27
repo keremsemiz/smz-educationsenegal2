@@ -100,6 +100,25 @@
         </div>
     </div>
 
+    <!-- New Student Testimonials Section -->
+    <div class="testimonials-section">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide">
+                <p>"The education I received at EVA Dakar prepared me for my career and beyond. The teachers truly care about their students."</p>
+                <span>- Amadou Ndiaye, Class of 2022</span>
+            </div>
+            <div class="testimonial-slide">
+                <p>"The diverse programs offered here allowed me to explore my interests and find my true passion."</p>
+                <span>- Fatou Diop, Class of 2021</span>
+            </div>
+            <div class="testimonial-slide">
+                <p>"EVA Dakar not only provided me with academic knowledge but also taught me valuable life skills."</p>
+                <span>- Moussa Ba, Class of 2020</span>
+            </div>
+        </div>
+    </div>
+
     <div class="admission-section">
         <div class="admission-card">
             <img src="/assets/professor.png" alt="Professor teaching students" class="admission-image">
@@ -191,9 +210,49 @@
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
+        // Simple form submission handler
         document.getElementById('newsletter-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for subscribing to our newsletter!');
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 5000);
+        showSlide(currentSlide);
+
+        // Scroll to Top button
+        const scrollToTopBtn = document.createElement('button');
+        scrollToTopBtn.id = 'scrollToTopBtn';
+        scrollToTopBtn.textContent = 'Top';
+        document.body.appendChild(scrollToTopBtn);
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
         });
     </script>
 </body>
