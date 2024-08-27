@@ -170,6 +170,61 @@ body, html {
     text-align: center;
 }
 
+.footer-col.quick-links {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-col.quick-links h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col.quick-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col.quick-links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col.quick-links ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .upcoming-events h2, .campus-tour h2 {
+        font-size: 2rem;
+    }
+
+    .event-card, .tour-image {
+        margin-bottom: 20px;
+    }
+
+    .main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+#scrollToTopBtn {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTopBtn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .upcoming-events h2 {
     color: #163269;
     font-size: 2.5rem;
