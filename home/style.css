@@ -199,6 +199,42 @@ body, html {
     color: #666;
 }
 
+.campus-tour {
+    background-color: #ffffff;
+    padding: 3rem 5rem;
+    text-align: center;
+}
+
+.campus-tour h2 {
+    color: #163269;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.tour-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tour-image {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tour-image:hover {
+    transform: scale(1.05);
+}
+
+.tour-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .testimonials-section {
     background-color: #ffffff;
     padding: 3rem 5rem;
@@ -234,6 +270,20 @@ body, html {
     display: block;
     color: #163269;
     font-weight: 600;
+}
+
+.testimonial-navigation {
+    margin-top: 1rem;
+}
+
+.testimonial-navigation button {
+    background-color: #42b983;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
 }
 
 .admission-section {
@@ -429,4 +479,22 @@ body, html {
     cursor: pointer;
     font-size: 1rem;
     z-index: 1000;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
 }

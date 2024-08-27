@@ -83,7 +83,6 @@
         </div>
     </div>
 
-    <!-- New Featured Programs Section -->
     <div class="featured-programs">
         <h2>Our Featured Programs</h2>
         <div class="program-card">
@@ -100,7 +99,24 @@
         </div>
     </div>
 
-    <!-- New Student Testimonials Section -->
+    <div class="campus-tour">
+        <h2>Campus Tour</h2>
+        <div class="tour-gallery">
+            <a href="/assets/campus1.jpg" class="tour-image">
+                <img src="/assets/campus1_thumb.jpg" alt="Main Building">
+            </a>
+            <a href="/assets/campus2.jpg" class="tour-image">
+                <img src="/assets/campus2_thumb.jpg" alt="Library">
+            </a>
+            <a href="/assets/campus3.jpg" class="tour-image">
+                <img src="/assets/campus3_thumb.jpg" alt="Sports Complex">
+            </a>
+            <a href="/assets/campus4.jpg" class="tour-image">
+                <img src="/assets/campus4_thumb.jpg" alt="Student Center">
+            </a>
+        </div>
+    </div>
+
     <div class="testimonials-section">
         <h2>What Our Students Say</h2>
         <div class="testimonial-slider">
@@ -116,6 +132,10 @@
                 <p>"EVA Dakar not only provided me with academic knowledge but also taught me valuable life skills."</p>
                 <span>- Moussa Ba, Class of 2020</span>
             </div>
+        </div>
+        <div class="testimonial-navigation">
+            <button id="prevSlide">Previous</button>
+            <button id="nextSlide">Next</button>
         </div>
     </div>
 
@@ -133,7 +153,6 @@
     <div class="partner-section">
         <div class="partner-container">
             <img src="/assets/eu1.png" alt="Europa Express" class="partner-logo">
-            <!-- New partner logos can be added here -->
         </div>
     </div>
     <footer class="footer">
@@ -210,7 +229,6 @@
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Simple form submission handler
         document.getElementById('newsletter-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for subscribing to our newsletter!');
@@ -226,20 +244,24 @@
             });
         }
 
-        function nextSlide() {
+        document.getElementById('prevSlide').addEventListener('click', () => {
+            currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('nextSlide').addEventListener('click', () => {
             currentSlide = (currentSlide + 1) % totalSlides;
             showSlide(currentSlide);
-        }
+        });
 
-        setInterval(nextSlide, 5000);
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }, 5000);
+
         showSlide(currentSlide);
 
-        // Scroll to Top button
-        const scrollToTopBtn = document.createElement('button');
-        scrollToTopBtn.id = 'scrollToTopBtn';
-        scrollToTopBtn.textContent = 'Top';
-        document.body.appendChild(scrollToTopBtn);
-
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -254,6 +276,27 @@
                 scrollToTopBtn.style.display = 'none';
             }
         });
+
+        const tourImages = document.querySelectorAll('.tour-image');
+
+        tourImages.forEach(image => {
+            image.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lightbox = document.createElement('div');
+                lightbox.id = 'lightbox';
+                document.body.appendChild(lightbox);
+
+                const img = document.createElement('img');
+                img.src = image.href;
+                lightbox.appendChild(img);
+
+                lightbox.addEventListener('click', () => {
+                    lightbox.remove();
+                });
+            });
+        });
     </script>
+
+    <button id="scrollToTopBtn">Top</button>
 </body>
 </html>
