@@ -321,9 +321,9 @@
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
-                scrollToTopBtn.style.display = 'block';
+                scrollToTopBtn.classList.remove('hidden');
             } else {
-                scrollToTopBtn.style.display = 'none';
+                scrollToTopBtn.classList.add('hidden');
             }
         });
 
