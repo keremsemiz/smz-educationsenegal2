@@ -164,6 +164,41 @@ body, html {
     color: #666;
 }
 
+.featured-programs {
+    background-color: #f9f9f9;
+    padding: 2rem 5rem;
+    text-align: center;
+}
+
+.featured-programs h2 {
+    color: #163269;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.featured-programs .program-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.featured-programs .program-card:hover {
+    transform: translateY(-5px);
+}
+
+.featured-programs .program-card h3 {
+    color: #1c3c82;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.featured-programs .program-card p {
+    color: #666;
+}
+
 .admission-section {
     display: flex;
     justify-content: center;
@@ -276,6 +311,27 @@ body, html {
 
 .footer-col address {
     line-height: 1.8;
+}
+
+.newsletter {
+    text-align: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #42b983;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .footer-bottom {

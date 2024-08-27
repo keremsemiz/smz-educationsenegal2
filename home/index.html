@@ -14,12 +14,14 @@
     <meta name="keywords" content="École EVA, Dakar, éducation, école, Sénégal">
     <meta name="author" content="École EVA Dakar">
 
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="École EVA Dakar - Premier Établissement Éducatif à Dakar">
     <meta property="og:description" content="Découvrez l'École EVA Dakar, un établissement éducatif de premier plan offrant une éducation moderne et de qualité à Dakar.">
     <meta property="og:image" content="/assets/school-building.jpg">
     <meta property="og:url" content="https://www.evaschooldakar.com">
 </head>
 <body>
+    <!-- Announcement Bar -->
     <div class="announcement-bar">
         <p>Important: Admissions for Fall 2024 are now open. Apply today!</p>
     </div>
@@ -80,6 +82,24 @@
             </div>
         </div>
     </div>
+
+    <!-- New Featured Programs Section -->
+    <div class="featured-programs">
+        <h2>Our Featured Programs</h2>
+        <div class="program-card">
+            <h3>STEM Education</h3>
+            <p>Innovative STEM curriculum that prepares students for the future.</p>
+        </div>
+        <div class="program-card">
+            <h3>Arts and Humanities</h3>
+            <p>Developing creativity and critical thinking through a robust arts program.</p>
+        </div>
+        <div class="program-card">
+            <h3>Sports and Physical Education</h3>
+            <p>Comprehensive physical education that promotes health and teamwork.</p>
+        </div>
+    </div>
+
     <div class="admission-section">
         <div class="admission-card">
             <img src="/assets/professor.png" alt="Professor teaching students" class="admission-image">
@@ -94,6 +114,7 @@
     <div class="partner-section">
         <div class="partner-container">
             <img src="/assets/eu1.png" alt="Europa Express" class="partner-logo">
+            <!-- New partner logos can be added here -->
         </div>
     </div>
     <footer class="footer">
@@ -141,6 +162,20 @@
                     <li><a href="#">Payer ma Scolarité</a></li>
                 </ul>
             </div>
+            <div class="footer-col">
+                <h4>Ressources Légales</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter">
+                <h4>Subscribe to our Newsletter</h4>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> École EVA Dakar. All rights reserved. Developed & Maintained by <a style="color: aliceblue;" href="https://www.smzedu.com">SMZ Education</a></p>
             <div class="footer-socials">
@@ -155,6 +190,11 @@
 
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+        });
     </script>
 </body>
 </html>
