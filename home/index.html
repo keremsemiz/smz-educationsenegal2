@@ -166,6 +166,24 @@
             </div>
         </div>
 
+        <div class="alumni-spotlight">
+            <h2>Alumni Spotlight</h2>
+            <div class="alumni-container">
+                <div class="alumni-card">
+                    <img src="/assets/alumni1.jpg" alt="Amadou Ndiaye">
+                    <h3>Amadou Ndiaye</h3>
+                    <p>Class of 2022, currently working as a Software Engineer at XYZ Corp.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+                <div class="alumni-card">
+                    <img src="/assets/alumni2.jpg" alt="Fatou Diop">
+                    <h3>Fatou Diop</h3>
+                    <p>Class of 2021, Founder of ABC Startup.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+            </div>
+        </div>        
+
         <div class="admission-section">
             <div class="admission-card">
                 <img src="/assets/professor.png" alt="Professor teaching students" class="admission-image">
@@ -280,8 +298,13 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for subscribing to our newsletter!');
+            const emailInput = this.querySelector('input[type="email"]');
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+            }
         });
 
         let currentSlide = 0;
