@@ -194,6 +194,30 @@
             <img src="/assets/eu1.png" alt="Europa Express" class="partner-logo">
         </div>
     </div>
+        <img src="/assets/campus1_opt.jpg" alt="Main Building" loading="lazy">
+        <img src="/assets/campus2_opt.jpg" alt="Library" loading="lazy">
+        <img src="/assets/campus3_opt.jpg" alt="Sports Complex" loading="lazy">
+        <img src="/assets/campus4_opt.jpg" alt="Student Center" loading="lazy">
+
+        <div class="footer-col contact-us">
+            <h4>Contact Us</h4>
+            <form id="contact-form">
+                <label for="contact-name">Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required>
+
+                <label for="contact-email">Email:</label>
+                <input type="email" id="contact-email" name="contact-email" required>
+
+                <label for="contact-subject">Subject:</label>
+                <input type="text" id="contact-subject" name="contact-subject" required>
+
+                <label for="contact-message">Message:</label>
+                <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+
 
     <footer class="footer" role="contentinfo">
         <div class="container">
@@ -387,6 +411,20 @@
                 });
             });
         });
+
+        // Contact form validation
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            const nameInput = this.querySelector('input[name="contact-name"]');
+            const emailInput = this.querySelector('input[name="contact-email"]');
+            const subjectInput = this.querySelector('input[name="contact-subject"]');
+            const messageInput = this.querySelector('textarea[name="contact-message"]');
+
+            if (!nameInput.value || !emailInput.value || !subjectInput.value || !messageInput.value) {
+                e.preventDefault();
+                alert('Please fill out all fields.');
+            }
+        });
+
 
         // Event registration form validation
         document.getElementById('event-registration-form').addEventListener('submit', function(e) {
