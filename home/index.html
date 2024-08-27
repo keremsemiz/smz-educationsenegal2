@@ -18,8 +18,30 @@
     <meta property="og:description" content="Découvrez l'École EVA Dakar, un établissement éducatif de premier plan offrant une éducation moderne et de qualité à Dakar.">
     <meta property="og:image" content="/assets/school-building.jpg">
     <meta property="og:url" content="https://www.evaschooldakar.com">
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "School",
+      "name": "École EVA Dakar",
+      "url": "https://www.evaschooldakar.com",
+      "logo": "/assets/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/evaschooldakar",
+        "https://www.instagram.com/evaschooldakar",
+        "https://www.twitter.com/evaschooldakar"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ouest-Foire, Villa n°12",
+        "addressLocality": "Dakar",
+        "addressCountry": "Senegal"
+      }
+    }
+    </script>
 </head>
 <body>
+    <!-- Announcement Bar -->
     <div class="announcement-bar" role="banner">
         <p>Important: Admissions for Fall 2024 are now open. Apply today!</p>
     </div>
@@ -82,23 +104,20 @@
             </div>
         </div>
 
-        <section class="event-registration" aria-labelledby="event-registration-heading">
-            <h2 id="event-registration-heading">Event Registration</h2>
-            <form id="event-registration-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <!-- New User Feedback Form -->
+        <section class="user-feedback" aria-labelledby="user-feedback-heading">
+            <h2 id="user-feedback-heading">We Value Your Feedback</h2>
+            <form id="feedback-form">
+                <label for="feedback-name">Name:</label>
+                <input type="text" id="feedback-name" name="feedback-name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="feedback-email">Email:</label>
+                <input type="email" id="feedback-email" name="feedback-email" required>
 
-                <label for="event">Select Event:</label>
-                <select id="event" name="event" required>
-                    <option value="science-fair">Science Fair - September 15, 2024</option>
-                    <option value="open-house">Open House - October 20, 2024</option>
-                    <option value="winter-concert">Winter Concert - December 12, 2024</option>
-                </select>
+                <label for="feedback-message">Your Feedback:</label>
+                <textarea id="feedback-message" name="feedback-message" rows="4" required></textarea>
 
-                <button type="submit" class="register-button">Register Now</button>
+                <button type="submit" class="submit-button">Submit Feedback</button>
             </form>
         </section>
 
@@ -121,17 +140,17 @@
         <div class="campus-tour">
             <h2>Campus Tour</h2>
             <div class="tour-gallery">
-                <a href="/assets/campus1.jpg" class="tour-image">
-                    <img src="/assets/campus1_thumb.jpg" alt="Main Building">
+                <a href="/assets/campus1_opt.jpg" class="tour-image">
+                    <img src="/assets/campus1_thumb.jpg" alt="Main Building" loading="lazy">
                 </a>
-                <a href="/assets/campus2.jpg" class="tour-image">
-                    <img src="/assets/campus2_thumb.jpg" alt="Library">
+                <a href="/assets/campus2_opt.jpg" class="tour-image">
+                    <img src="/assets/campus2_thumb.jpg" alt="Library" loading="lazy">
                 </a>
-                <a href="/assets/campus3.jpg" class="tour-image">
-                    <img src="/assets/campus3_thumb.jpg" alt="Sports Complex">
+                <a href="/assets/campus3_opt.jpg" class="tour-image">
+                    <img src="/assets/campus3_thumb.jpg" alt="Sports Complex" loading="lazy">
                 </a>
-                <a href="/assets/campus4.jpg" class="tour-image">
-                    <img src="/assets/campus4_thumb.jpg" alt="Student Center">
+                <a href="/assets/campus4_opt.jpg" class="tour-image">
+                    <img src="/assets/campus4_thumb.jpg" alt="Student Center" loading="lazy">
                 </a>
             </div>
         </div>
@@ -155,7 +174,7 @@
         </div>
 
         <div class="testimonials-section">
-            <h2>What Our Students Say</h2>
+            <h2>What Our Students and Teachers Say</h2>
             <div class="testimonial-slider">
                 <div class="testimonial-slide">
                     <p>"The education I received at EVA Dakar prepared me for my career and beyond. The teachers truly care about their students."</p>
@@ -166,6 +185,10 @@
                     <span>- Fatou Diop, Class of 2021</span>
                 </div>
                 <div class="testimonial-slide">
+                    <p>"Teaching at EVA Dakar has been a rewarding experience. The school's commitment to excellence is unmatched."</p>
+                    <span>- Professor Marie Sow</span>
+                </div>
+                <div class="testimonial-slide">
                     <p>"EVA Dakar not only provided me with academic knowledge but also taught me valuable life skills."</p>
                     <span>- Moussa Ba, Class of 2020</span>
                 </div>
@@ -174,26 +197,6 @@
                 <button id="prevSlide">Previous</button>
                 <button id="nextSlide">Next</button>
             </div>
-        </div>
-
-        <div class="dark-mode-toggle">
-            <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
-            <label for="dark-mode-toggle">Dark Mode</label>
-        </div>
-
-        <section class="about-us">
-            <h2>About Us</h2>
-            <p>Founded in 2000, École EVA Dakar has been dedicated to providing high-quality education that fosters academic excellence and personal growth. Our mission is to prepare students for success in a rapidly changing world through innovative teaching and a commitment to diversity and inclusion.</p>
-        </section>
-
-        <div class="footer-col follow-us">
-            <h4>Follow Us</h4>
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-            </ul>
         </div>
 
         <div class="admission-section">
@@ -214,30 +217,6 @@
             <img src="/assets/eu1.png" alt="Europa Express" class="partner-logo">
         </div>
     </div>
-        <img src="/assets/campus1_opt.jpg" alt="Main Building" loading="lazy">
-        <img src="/assets/campus2_opt.jpg" alt="Library" loading="lazy">
-        <img src="/assets/campus3_opt.jpg" alt="Sports Complex" loading="lazy">
-        <img src="/assets/campus4_opt.jpg" alt="Student Center" loading="lazy">
-
-        <div class="footer-col contact-us">
-            <h4>Contact Us</h4>
-            <form id="contact-form">
-                <label for="contact-name">Name:</label>
-                <input type="text" id="contact-name" name="contact-name" required>
-
-                <label for="contact-email">Email:</label>
-                <input type="email" id="contact-email" name="contact-email" required>
-
-                <label for="contact-subject">Subject:</label>
-                <input type="text" id="contact-subject" name="contact-subject" required>
-
-                <label for="contact-message">Message:</label>
-                <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
-
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
-        </div>
-
 
     <footer class="footer" role="contentinfo">
         <div class="container">
@@ -282,15 +261,13 @@
                     <li><a href="#">Vie Étudiante</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Académiques</h4>
+            <div class="footer-col follow-us">
+                <h4>Follow Us</h4>
                 <ul>
-                    <li><a href="#">Canvas</a></li>
-                    <li><a href="#">Catalyst</a></li>
-                    <li><a href="#">Bibliothèque</a></li>
-                    <li><a href="#">Horaire des Cours</a></li>
-                    <li><a href="#">Demande d'Admission</a></li>
-                    <li><a href="#">Payer ma Scolarité</a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -335,7 +312,6 @@
             }
         });
 
-        // Testimonial slider
         let currentSlide = 0;
         const slides = document.querySelectorAll('.testimonial-slide');
         const totalSlides = slides.length;
@@ -363,7 +339,6 @@
 
         showSlide(currentSlide);
 
-        // Scroll to Top button
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({
@@ -380,7 +355,6 @@
             }
         });
 
-        // Lightbox gallery for campus tour
         const tourImages = document.querySelectorAll('.tour-image');
 
         tourImages.forEach(image => {
@@ -400,7 +374,6 @@
             });
         });
 
-        // Countdown timer
         const eventDate = new Date('2024-09-15T00:00:00').getTime();
         const countdownElement = document.getElementById('countdown');
 
@@ -422,7 +395,6 @@
 
         setInterval(updateCountdown, 1000);
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -432,7 +404,17 @@
             });
         });
 
-        // Contact form validation
+        document.getElementById('event-registration-form').addEventListener('submit', function(e) {
+            const nameInput = this.querySelector('input[name="name"]');
+            const emailInput = this.querySelector('input[name="email"]');
+            const eventSelect = this.querySelector('select[name="event"]');
+
+            if (!nameInput.value || !emailInput.value || !eventSelect.value) {
+                e.preventDefault();
+                alert('Please fill out all fields.');
+            }
+        });
+
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             const nameInput = this.querySelector('input[name="contact-name"]');
             const emailInput = this.querySelector('input[name="contact-email"]');
@@ -445,7 +427,17 @@
             }
         });
 
-        // Dark mode toggle
+        document.getElementById('feedback-form').addEventListener('submit', function(e) {
+            const nameInput = this.querySelector('input[name="feedback-name"]');
+            const emailInput = this.querySelector('input[name="feedback-email"]');
+            const messageInput = this.querySelector('textarea[name="feedback-message"]');
+
+            if (!nameInput.value || !emailInput.value || !messageInput.value) {
+                e.preventDefault();
+                alert('Please fill out all fields.');
+            }
+        });
+
         const toggleSwitch = document.getElementById('dark-mode-toggle');
         const currentTheme = localStorage.getItem('theme');
 
@@ -465,20 +457,7 @@
                 localStorage.setItem('theme', 'light-mode');
             }
         });
-
-        // Event registration form validation
-        document.getElementById('event-registration-form').addEventListener('submit', function(e) {
-            const nameInput = this.querySelector('input[name="name"]');
-            const emailInput = this.querySelector('input[name="email"]');
-            const eventSelect = this.querySelector('select[name="event"]');
-
-            if (!nameInput.value || !emailInput.value || !eventSelect.value) {
-                e.preventDefault();
-                alert('Please fill out all fields.');
-            }
-        });
     </script>
-
 
     <button id="scrollToTopBtn">Top</button>
 </body>
