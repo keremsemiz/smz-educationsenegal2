@@ -164,235 +164,53 @@ body, html {
     color: #666;
 }
 
-.upcoming-events {
+.event-registration {
     background-color: #f9f9f9;
     padding: 2rem 5rem;
     text-align: center;
 }
 
-.footer-col.quick-links {
-    margin: 10px;
-    min-width: 200px;
-}
-
-.footer-col.quick-links h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.footer-col.quick-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col.quick-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-col.quick-links ul li a {
-    color: #bbb;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-col.quick-links ul li a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.alumni-spotlight {
-    background-color: #ffffff;
-    padding: 3rem 5rem;
-    text-align: center;
-}
-
-.alumni-spotlight h2 {
+.event-registration h2 {
     color: #163269;
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
-.alumni-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+#event-registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-.alumni-card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 250px;
-}
-
-.alumni-card img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.faculty-profiles {
-    background-color: #f9f9f9;
-    padding: 3rem 5rem;
-    text-align: center;
-}
-
-.faculty-profiles h2 {
-    color: #163269;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.faculty-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.faculty-card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 250px;
-    position: relative;
-}
-
-.faculty-card img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.faculty-card h3 {
-    color: #1c3c82;
-    font-size: 1.5rem;
+#event-registration-form label {
+    display: block;
     margin-bottom: 0.5rem;
-}
-
-.faculty-card p {
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.learn-more {
-    background-color: #42b983;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.learn-more:hover {
-    background-color: #369b75;
-}
-
-.alumni-card h3 {
-    color: #1c3c82;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.alumni-card p {
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.read-more {
-    background-color: #42b983;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-input:focus, button:focus {
-    outline: 2px solid #42b983;
-    outline-offset: 2px;
-}
-
-@media (max-width: 768px) {
-    .upcoming-events h2, .campus-tour h2 {
-        font-size: 2rem;
-    }
-
-    .event-card, .tour-image {
-        margin-bottom: 20px;
-    }
-
-    .main {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-#scrollToTopBtn {
-    transition: opacity 0.3s ease-in-out;
-}
-
-#scrollToTopBtn.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.upcoming-events h2 {
     color: #163269;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.events-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.event-card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.event-card h3 {
-    color: #1c3c82;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.event-card p {
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.event-card time {
-    color: #42b983;
     font-weight: bold;
 }
 
-.see-all-events {
+#event-registration-form input,
+#event-registration-form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.register-button {
     background-color: #42b983;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-.event-countdown {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    color: #DF2526;
+.register-button:hover {
+    background-color: #379f69;
 }
 
 .featured-programs {
@@ -466,6 +284,65 @@ input:focus, button:focus {
     display: block;
 }
 
+.alumni-spotlight {
+    background-color: #ffffff;
+    padding: 3rem 5rem;
+    text-align: center;
+}
+
+.alumni-spotlight h2 {
+    color: #163269;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.alumni-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.alumni-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.alumni-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.alumni-card h3 {
+    color: #1c3c82;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.alumni-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    background-color: #42b983;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #379f69;
+}
+
 .testimonials-section {
     background-color: #ffffff;
     padding: 3rem 5rem;
@@ -517,6 +394,10 @@ input:focus, button:focus {
     margin: 0 5px;
 }
 
+.testimonial-navigation button:hover {
+    background-color: #379f69;
+}
+
 .admission-section {
     display: flex;
     justify-content: center;
@@ -563,6 +444,11 @@ input:focus, button:focus {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #379f69;
 }
 
 .admission-image {
@@ -631,6 +517,37 @@ input:focus, button:focus {
     line-height: 1.8;
 }
 
+.footer-col.quick-links {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-col.quick-links h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col.quick-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col.quick-links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col.quick-links ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .newsletter {
     text-align: center;
 }
@@ -650,6 +567,11 @@ input:focus, button:focus {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #379f69;
 }
 
 .footer-bottom {
@@ -710,6 +632,12 @@ input:focus, button:focus {
     cursor: pointer;
     font-size: 1rem;
     z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTopBtn.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 #lightbox {
@@ -728,4 +656,24 @@ input:focus, button:focus {
 #lightbox img {
     max-width: 90%;
     max-height: 90%;
+}
+
+input:focus, button:focus {
+    outline: 2px solid #42b983;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .upcoming-events h2, .campus-tour h2, .alumni-spotlight h2, .event-registration h2 {
+        font-size: 2rem;
+    }
+
+    .event-card, .tour-image, .alumni-card, .info-card {
+        margin-bottom: 20px;
+    }
+
+    .main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
