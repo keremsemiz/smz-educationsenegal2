@@ -195,6 +195,23 @@
                 </div>
             </div>
         </div>
+        <div class="faculty-profiles">
+            <h2>Meet Our Faculty</h2>
+            <div class="faculty-container">
+                <div class="faculty-card">
+                    <img src="/assets/faculty1.jpg" alt="Dr. Mamadou Ba">
+                    <h3>Dr. Mamadou Ba</h3>
+                    <p>Head of Science Department</p>
+                    <button class="learn-more">Learn More</button>
+                </div>
+                <div class="faculty-card">
+                    <img src="/assets/faculty2.jpg" alt="Mme. Awa Diop">
+                    <h3>Mme. Awa Diop</h3>
+                    <p>Head of Arts Department</p>
+                    <button class="learn-more">Learn More</button>
+                </div>
+            </div>
+        </div>        
     </main>
 
     <div class="partner-section">
@@ -399,7 +416,34 @@
             });
         });
     </script>
+    <script>
+let facultyPage = 1;
 
+window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+        loadMoreFacultyProfiles();
+    }
+});
+
+function loadMoreFacultyProfiles() {
+    facultyPage++;
+    const newProfiles = `
+        <div class="faculty-card">
+            <img src="/assets/faculty3.jpg" alt="Prof. Seydou Diagne">
+            <h3>Prof. Seydou Diagne</h3>
+            <p>Head of Mathematics Department</p>
+            <button class="learn-more">Learn More</button>
+        </div>
+        <div class="faculty-card">
+            <img src="/assets/faculty4.jpg" alt="Mme. Fatima Kane">
+            <h3>Mme. Fatima Kane</h3>
+            <p>Head of Language Department</p>
+            <button class="learn-more">Learn More</button>
+        </div>
+    `;
+    document.querySelector('.faculty-container').insertAdjacentHTML('beforeend', newProfiles);
+}
+    </script>
     <button id="scrollToTopBtn">Top</button>
 </body>
 </html>

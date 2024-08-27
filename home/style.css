@@ -234,6 +234,65 @@ body, html {
     border-radius: 8px;
 }
 
+.faculty-profiles {
+    background-color: #f9f9f9;
+    padding: 3rem 5rem;
+    text-align: center;
+}
+
+.faculty-profiles h2 {
+    color: #163269;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.faculty-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.faculty-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    position: relative;
+}
+
+.faculty-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.faculty-card h3 {
+    color: #1c3c82;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.faculty-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.learn-more {
+    background-color: #42b983;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.learn-more:hover {
+    background-color: #369b75;
+}
+
 .alumni-card h3 {
     color: #1c3c82;
     font-size: 1.5rem;
