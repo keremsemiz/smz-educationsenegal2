@@ -164,6 +164,64 @@ body, html {
     color: #666;
 }
 
+.upcoming-events {
+    background-color: #f9f9f9;
+    padding: 2rem 5rem;
+    text-align: center;
+}
+
+.upcoming-events h2 {
+    color: #163269;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+    color: #1c3c82;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.event-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.event-card time {
+    color: #42b983;
+    font-weight: bold;
+}
+
+.see-all-events {
+    background-color: #42b983;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.event-countdown {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #DF2526;
+}
+
 .featured-programs {
     background-color: #f9f9f9;
     padding: 2rem 5rem;
