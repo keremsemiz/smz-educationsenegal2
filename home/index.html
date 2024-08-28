@@ -41,7 +41,6 @@
     </script>
 </head>
 <body>
-    <!-- Announcement Bar -->
     <div class="announcement-bar" role="banner">
         <p>Important: Admissions for Fall 2024 are now open. Apply today!</p>
     </div>
@@ -104,18 +103,67 @@
             </div>
         </div>
 
-        <!-- New User Feedback Form -->
+        <div class="error-page">
+            <h2>Oops! Page Not Found</h2>
+            <p>The page you're looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            <p>Go back to the <a href="#">homepage</a> or explore some of our popular pages:</p>
+            <ul>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <section class="social-media-feeds" aria-labelledby="social-media-feeds-heading">
+            <h2 id="social-media-feeds-heading">Stay Connected</h2>
+            <div class="feeds-container">
+                <div class="twitter-feed">
+                    <h3>Latest Tweets</h3>
+                    <a class="twitter-timeline" data-height="400" href="https://twitter.com/EvaSchoolDakar?ref_src=twsrc%5Etfw">Tweets by EvaSchoolDakar</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="instagram-feed">
+                    <h3>Instagram Highlights</h3>
+                    <div id="instagram-feed"></div>
+                    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+                    <iframe src="https://cdn.lightwidget.com/widgets/xxxx.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <div class="campus-tour">
+            <h2>Campus Tour</h2>
+            <div class="tour-gallery">
+                <a href="/assets/campus1_opt.jpg" class="tour-image" data-caption="Main Building - A central hub for students">
+                    <img src="/assets/campus1_thumb.jpg" alt="Main Building" loading="lazy">
+                </a>
+                <a href="/assets/campus2_opt.jpg" class="tour-image" data-caption="Library - A place for knowledge and research">
+                    <img src="/assets/campus2_thumb.jpg" alt="Library" loading="lazy">
+                </a>
+                <a href="/assets/campus3_opt.jpg" class="tour-image" data-caption="Sports Complex - Where our athletes train and compete">
+                    <img src="/assets/campus3_thumb.jpg" alt="Sports Complex" loading="lazy">
+                </a>
+                <a href="/assets/campus4_opt.jpg" class="tour-image" data-caption="Student Center - The heart of student life">
+                    <img src="/assets/campus4_thumb.jpg" alt="Student Center" loading="lazy">
+                </a>
+            </div>
+        </div>
+
         <section class="user-feedback" aria-labelledby="user-feedback-heading">
             <h2 id="user-feedback-heading">We Value Your Feedback</h2>
             <form id="feedback-form">
                 <label for="feedback-name">Name:</label>
-                <input type="text" id="feedback-name" name="feedback-name" required>
+                <input type="text" id="feedback-name" name="feedback-name" required aria-required="true">
 
                 <label for="feedback-email">Email:</label>
-                <input type="email" id="feedback-email" name="feedback-email" required>
+                <input type="email" id="feedback-email" name="feedback-email" required aria-required="true">
 
                 <label for="feedback-message">Your Feedback:</label>
-                <textarea id="feedback-message" name="feedback-message" rows="4" required></textarea>
+                <textarea id="feedback-message" name="feedback-message" rows="4" required aria-required="true"></textarea>
 
                 <button type="submit" class="submit-button">Submit Feedback</button>
             </form>
@@ -134,24 +182,6 @@
             <div class="program-card">
                 <h3>Sports and Physical Education</h3>
                 <p>Comprehensive physical education that promotes health and teamwork.</p>
-            </div>
-        </div>
-
-        <div class="campus-tour">
-            <h2>Campus Tour</h2>
-            <div class="tour-gallery">
-                <a href="/assets/campus1_opt.jpg" class="tour-image">
-                    <img src="/assets/campus1_thumb.jpg" alt="Main Building" loading="lazy">
-                </a>
-                <a href="/assets/campus2_opt.jpg" class="tour-image">
-                    <img src="/assets/campus2_thumb.jpg" alt="Library" loading="lazy">
-                </a>
-                <a href="/assets/campus3_opt.jpg" class="tour-image">
-                    <img src="/assets/campus3_thumb.jpg" alt="Sports Complex" loading="lazy">
-                </a>
-                <a href="/assets/campus4_opt.jpg" class="tour-image">
-                    <img src="/assets/campus4_thumb.jpg" alt="Student Center" loading="lazy">
-                </a>
             </div>
         </div>
 
@@ -199,52 +229,13 @@
             </div>
         </div>
 
-        <section class="latest-news" aria-labelledby="latest-news-heading">
-            <h2 id="latest-news-heading">Latest News & Blog</h2>
-            <div class="news-container">
-                <article class="news-item">
-                    <h3><a href="#" aria-label="Read more about the STEM Conference">STEM Conference Success</a></h3>
-                    <p>The recent STEM conference hosted by École EVA Dakar was a huge success, drawing students and experts from across the region.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
-                <article class="news-item">
-                    <h3><a href="#" aria-label="Read more about our new Arts Program">New Arts Program Launched</a></h3>
-                    <p>We are excited to announce the launch of our new Arts and Humanities program, aimed at fostering creativity and critical thinking.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
-                <article class="news-item">
-                    <h3><a href="#" aria-label="Read more about the Alumni Reunion">Alumni Reunion Highlights</a></h3>
-                    <p>Our recent alumni reunion brought together past students from all over the world to celebrate their achievements and reconnect.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
-            </div>
-        </section>
-
-        <form id="contact-form" aria-labelledby="contact-form-heading">
-            <h3 id="contact-form-heading">Contact Us</h3>
-            <label for="contact-name">Name:</label>
-            <input type="text" id="contact-name" name="contact-name" required aria-required="true">
-
-            <label for="contact-email">Email:</label>
-            <input type="email" id="contact-email" name="contact-email" required aria-required="true">
-
-            <label for="contact-subject">Subject:</label>
-            <input type="text" id="contact-subject" name="contact-subject" required aria-required="true">
-
-            <label for="contact-message">Message:</label>
-            <textarea id="contact-message" name="contact-message" rows="4" required aria-required="true"></textarea>
-
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
-
-
         <div class="admission-section">
             <div class="admission-card">
                 <img src="/assets/professor.png" alt="Professor teaching students" class="admission-image">
                 <div class="admission-content">
                     <h2>Apply for Admission</h2>
                     <p class="green-text">Fall 2024 applications are now open</p>
-                    <p>We don’t just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.</p>
+                    <p>We don't just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.</p>
                     <button class="apply-button">Apply Now</button>
                 </div>
             </div>
@@ -337,6 +328,27 @@
             </div>
         </div>
     </footer>
+
+    <div id="newsletter-popup" class="popup hidden">
+        <div class="popup-content">
+            <button id="close-popup" class="close-popup">&times;</button>
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Stay updated with the latest news and events at École EVA Dakar.</p>
+            <form id="popup-newsletter-form">
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-XXXXX-Y');
+    </script>
 
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -466,18 +478,6 @@
             }
         });
 
-                document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
-                const inputs = this.querySelectorAll('input, textarea');
-                inputs.forEach(input => {
-                    if (!input.value || input.value.includes('<script>')) {
-                        e.preventDefault();
-                        alert('Please fill out all fields correctly.');
-                    }
-                });
-            });
-        });
-
         document.getElementById('feedback-form').addEventListener('submit', function(e) {
             const nameInput = this.querySelector('input[name="feedback-name"]');
             const emailInput = this.querySelector('input[name="feedback-email"]');
@@ -508,6 +508,15 @@
                 localStorage.setItem('theme', 'light-mode');
             }
         });
+
+        setTimeout(() => {
+            const popup = document.getElementById('newsletter-popup');
+            popup.classList.remove('hidden');
+
+            document.getElementById('close-popup').addEventListener('click', () => {
+                popup.classList.add('hidden');
+            });
+        }, 30000); 
     </script>
 
     <button id="scrollToTopBtn">Top</button>
