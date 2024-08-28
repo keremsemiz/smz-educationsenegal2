@@ -199,6 +199,45 @@
             </div>
         </div>
 
+        <section class="latest-news" aria-labelledby="latest-news-heading">
+            <h2 id="latest-news-heading">Latest News & Blog</h2>
+            <div class="news-container">
+                <article class="news-item">
+                    <h3><a href="#" aria-label="Read more about the STEM Conference">STEM Conference Success</a></h3>
+                    <p>The recent STEM conference hosted by École EVA Dakar was a huge success, drawing students and experts from across the region.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                <article class="news-item">
+                    <h3><a href="#" aria-label="Read more about our new Arts Program">New Arts Program Launched</a></h3>
+                    <p>We are excited to announce the launch of our new Arts and Humanities program, aimed at fostering creativity and critical thinking.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                <article class="news-item">
+                    <h3><a href="#" aria-label="Read more about the Alumni Reunion">Alumni Reunion Highlights</a></h3>
+                    <p>Our recent alumni reunion brought together past students from all over the world to celebrate their achievements and reconnect.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+        </section>
+
+        <form id="contact-form" aria-labelledby="contact-form-heading">
+            <h3 id="contact-form-heading">Contact Us</h3>
+            <label for="contact-name">Name:</label>
+            <input type="text" id="contact-name" name="contact-name" required aria-required="true">
+
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" name="contact-email" required aria-required="true">
+
+            <label for="contact-subject">Subject:</label>
+            <input type="text" id="contact-subject" name="contact-subject" required aria-required="true">
+
+            <label for="contact-message">Message:</label>
+            <textarea id="contact-message" name="contact-message" rows="4" required aria-required="true"></textarea>
+
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+
+
         <div class="admission-section">
             <div class="admission-card">
                 <img src="/assets/professor.png" alt="Professor teaching students" class="admission-image">
@@ -425,6 +464,18 @@
                 e.preventDefault();
                 alert('Please fill out all fields.');
             }
+        });
+
+                document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                const inputs = this.querySelectorAll('input, textarea');
+                inputs.forEach(input => {
+                    if (!input.value || input.value.includes('<script>')) {
+                        e.preventDefault();
+                        alert('Please fill out all fields correctly.');
+                    }
+                });
+            });
         });
 
         document.getElementById('feedback-form').addEventListener('submit', function(e) {
